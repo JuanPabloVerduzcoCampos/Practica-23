@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <h1>Agregar Persona</h1>
+
+    <form action="/updatePerson" method="POST">
+        <label for="nss">NSS:</label>
+        <input type="text" id="nss" name="nss" value="<%=`${myPerson.nss}`%>"><br><br>
+    
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" value="<%= `${myPerson.nombre}` %>"><br><br>
+    
+        <label for="edad">Edad:</label> 
+        <input type="text" id="edad" name="edad" value="<%= `${myPerson.edad}` %>"><br><br>
+    
+        <label for="tipoSangre">Tipo de sangre:</label>
+        <input type="text" id="tipoSangre" name="tipoSangre" value="<%= `${myPerson.tipoSangre}` %>"><br><br>
+    
+        <label for="objId">ID:</label>
+        <input type="text" id="objId" name="objId" value="<%= `${myPerson._id}` %>"><br><br> 
+    
+        <input type="submit" value="Submit">
+    </form>
+    
+</body>
+</html>

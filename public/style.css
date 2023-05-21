@@ -1,0 +1,44 @@
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  #titulo {
+    padding-top: 20px;
+    padding-left: 150px;
+    font-size: 24px;
+    color: #333;
+  }
+  
+  #agregarUsuario {
+    padding-left: 150px;
+    padding-bottom: 30px;
+  }
+  
+  #main-container {
+    display: flex;
+    justify-content: center;
+    margin: 50px auto;
+    width: 80%;
+  }
+  
+  table {
+    font-size: 16px;
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  td, th {
+    padding: 10px;
+    text-align: left;
+  }
+  
+  th {
+    text-align: center;
+    color: white;
+    background-color: #428bca;
+    border-bottom: solid 2px black;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }  

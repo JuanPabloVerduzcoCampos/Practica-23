@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href=/assets/style.css type=text/css rel=stylesheet />
+    <title>Usuarios</title>
+</head>
+<body>
+    <div id="buscador">
+        <form action="/find" method="post" id="buscador">
+            <label for="criterio" id="criterio1">Criterio:</label>
+            <input type="text" id="criteria" name="criteria">
+            <input type="submit" value="Buscar" id="Buscar">
+        </form>
+    </div>
+    <div id="titulo">
+        <p>Catalogo de usuarios</p>
+    </div>
+    <div id="main-container">
+        <table>
+            <tr>
+                <th>Nombre</th>
+                <th>Edad</th>
+                <th>Tipo de Sangre</th>
+                <th>NSS</th>
+                <th></th>
+                <th></th>
+            </tr>
+            <% Persons.forEach(person => { %>
+                <tr>
+                    <td><%= person.nombre%></td>
+                    <td style="text-align: center"><%= person.edad%></td>
+                    <td style="text-align: center"><%= person.tipoSangre%></td>
+                    <td style="text-align: center"><%= person.nss%></td>
+                    <td><a href="URL">Actualizar</a></td>
+                    <td><a href="URL">Eliminar</a></td>
+                </tr>
+        <%});%>
+        </table>
+    </div>
+    <div id="agregarUsuario">
+        <a href="addPerson.ejs">Agregar</a> 
+    </div>
+
+<script type="text/javascript">
+        function confirmar() 
+        {
+            let eliminar = confirm('¿Estas seguro de eliminar?'); 
+            if(eliminar){
+                return true;
+            }else{
+                return false
+            };
+                 
+        }
+</script>
+    
+</body>
+</html>
